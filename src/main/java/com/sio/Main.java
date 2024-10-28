@@ -34,6 +34,20 @@ public class Main {
                     System.out.println("---------------------------------------------");
                     //Exercice 1 : Entrer votre code ici
 
+                    //Variables
+                    System.out.println("Entrer un nombre : ");
+                    int nombre = scanner.nextInt();
+                    System.out.println("Entrer la puissance : ");
+                    int puissance = scanner.nextInt();
+                    while (puissance < 0) {
+                        System.out.println("La puissance doit être supérieure ou égale à 0");
+                        System.out.println("Entrer la puissance : ");
+                        puissance = scanner.nextInt();
+                    }
+                    // Calcul de la puissance avec Math.pow
+                    double resultat = Math.pow(nombre, puissance);
+                    System.out.println("Le résultat de " + nombre + " puissance " + puissance + " est de : " + resultat);
+
 
 
                     System.out.println("---------------------------------------------");
@@ -43,6 +57,26 @@ public class Main {
                     System.out.println("Exercice 2");
                     System.out.println("---------------------------------------------");
                     //Exercice 2 : Entrer votre code ici
+
+                    //Variables
+                    System.out.println("Entrer le nombre de kilomètres parcourus par le client : ");
+                    int km = scanner.nextInt();
+                    while (km <= 0) {
+                        System.out.println("Le nombre de kilomètres doit être supérieur ou égal à 0");
+                        System.out.println("Entrer le nombre de kilomètres parcourus par le client : ");
+                        km = scanner.nextInt();
+                    }
+
+                    //Code
+                    if (km <= 100) {
+                        System.out.println("Le montant à payer par le client est : " + km * 0.2 + "€");
+                    }
+                    else if (km > 100 && km < 500) {
+                        System.out.println("Le montant à payer par le client est : " + km * 0.5 + "€");
+                    }
+                    else if (km > 500) {
+                        System.out.println("Le montant à payer par le client est : " + km * 0.8 + "€");
+                    }
 
 
 
@@ -56,6 +90,31 @@ public class Main {
                     //Exercice 3 : Entrer votre code ici
 
 
+                    //Variables
+                    System.out.println("Entrer la largeur du rectangle : ");
+                    int largeur = scanner.nextInt();
+                    while (largeur <= 0) {
+                        System.out.println("La largeur doit être superieur à 0");
+                        System.out.println("Entrer la largeur du rectangle : ");
+                        largeur = scanner.nextInt();
+                    }
+                    System.out.println("Entrer la hauteur du rectangle : ");
+                    int hauteur = scanner.nextInt();
+                    while (hauteur <= 0) {
+                        System.out.println("La hauteur doit être superieur à 0");
+                        System.out.println("Entrer la hauteur du rectangle : ");
+                        hauteur = scanner.nextInt();
+                    }
+
+                    //Code
+                    for (int a = 0; a < hauteur; a++) {
+                        for (int b = 0; b < largeur; b++) {
+                            System.out.print("*");
+                        }
+                        System.out.println();
+                    }
+
+
 
 
                     System.out.println("---------------------------------------------");
@@ -66,6 +125,22 @@ public class Main {
                     System.out.println("Exercice 4");
                     System.out.println("---------------------------------------------");
                     //Exercice 4 : Entrer votre code ici
+
+                    //Variables
+                    System.out.println("Entrer un nombre : ");
+                    int nb = scanner.nextInt();
+                    while (nb <= 0) {
+                        System.out.println("Le nombre doit être superieur à 0");
+                        System.out.println("Entrer un nombre : ");
+                        nb = scanner.nextInt();
+                    }
+
+                    //Code
+                    long factorial=1;
+                    for (int a = nb; a > 0; a--) {
+                        factorial *= a;
+                    }
+                    System.out.println("Le factoriel de " + nb + " est : " + factorial);
 
 
 
